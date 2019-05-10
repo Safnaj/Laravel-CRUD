@@ -56,6 +56,7 @@ class CreatesController extends Controller
         return view('read', ['items' => $items]);
     }
 
+	//Delete Function using ID
     public function delete($id){
         Item::where('id', $id)->delete();
         return redirect('/')->with('info','Item Deleted Successfully..!');
